@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Etap 1</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body class="page page--krakow">
+    <div class="site">
+      <header>
+        <h1>Miasto, które pamięta wszystko</h1>
+        <nav>
+          <a href="index.html">Start</a>
+          <a href="golebaby.html">Gołe baby</a>
+          <a href="http://because-recollection.com/laurent-garnier">Nie bardzo wiem co to</a>
+          <a href="labirynt.html">Tutaj nie wchodź</a>
+        </nav>
+      </header>
+      <main>
+         <section class="card">
+          <h2>Zagadka #1: Gdzie to będzie?</h2>
+          <p>
+            Znajdź słowo kluczowe, które otworzy Ci drzwi do kolejnego etapu.
+            To nazwa miejsca, w którym się widzimy. 
+          </p>
+          <ul>
+            <li>Krowa robi Mooo! ( .  人  . )</li>
+            <li>Ruchanie, wieszanie diamentów na jebanej ścianie.</li>
+            <li>Ale bym przyjebał velasa.</li>
+            <li><a href="https://open.spotify.com/track/73oA0BT2pAvcXRb3tSk0IJ?si=8287014e19294f28">Kaptur</a>, żeby nikt nie wszedł Ci na głowę</li>
+            <li>Oświecenie 1-800</li>
+            <li>wWA melanż.</li>
+          </ul>
+          <form class="puzzle-form" data-answer="krakow|cracow|kraków">
+            <label>
+              Hasło
+              <input
+                type="text"
+                name="answer"
+                autocomplete="off"
+                placeholder="małe litery, bez znaków specjalnych"
+                required
+              />
+            </label>
+            <button class="button" type="submit">Sprawdź</button>
+            <p class="puzzle-feedback" id="feedback-start"></p>
+          </form>
+          <div class="puzzle-success" hidden>
+            <p>
+              W końcu! Tam mieszkam i tam się widimy
+              Lecisz dalej:
+            </p>
+            <a class="primary-link" href="krakow.html"
+              >Przejdź do kolejnego etapu</a
+            >
+          </div>
+        </section>
+        <section class="card">
+          <!-- <h3>Powspominajmy chwilę</h3> -->
+          <div class="gallery-grid">
+            <figure>
+              <img src="IMG_0072.png" alt="Wieczorny spacer po mieście" />
+              <!-- <figcaption>Światła miasta, które nigdy nie zasypia.</figcaption> -->
+            </figure>
+            <figure>
+              <img src="IMG_0665.png" alt="Para na tle neonów" />
+              <!-- <figcaption>
+                Neonowe wskazówki prowadzące do kolejnych tajemnic.
+              </figcaption> -->
+            </figure>
+            <figure>
+              <img src="IMG_0660.png" alt="Radość w podróży" />
+              <!-- <figcaption>
+                Każde zdjęcie to nowy moment do odtworzenia na żywo.
+              </figcaption> -->
+            </figure>
+          </div>
+        </section>
+        <section class="card">
+          <h3>Warto sprawdzić</h3>
+          <!-- <p> -->
+            <!-- Możesz spróbować zajrzeć w inne linki, ale przygotuj się, że to
+            najprawdopodobniej fałszywy trop. -->
+          <!-- </p> -->
+          <div class="fake-links">
+            <a href="https://www.youtube.com/watch?v=To7ZFqKDnng"
+            data-twist="feedback-start">do zmiany</a>
+            <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"
+              >JACKPOT</a
+            >
+            <a href="https://www.instagram.com/reel/DMzrzgtIOLH/?igsh=eDJwOHl1cTVudXFl">Kuba chuju</a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="assets/script.js" defer></script>
+  </body>
+</html>
