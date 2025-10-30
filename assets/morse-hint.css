@@ -4,7 +4,7 @@
   margin: 0;
   min-height: 100vh;
   font-family: "Manrope", system-ui, sans-serif;
-  background: url("../korytarz-podpowiedź.png") center/cover no-repeat fixed;
+  background: url("../korytarz-podpowiedz.png") center/cover no-repeat fixed;
   display: flex;
   align-items: stretch;
   justify-content: center;
