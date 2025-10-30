@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+
+.hint-body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", system-ui, sans-serif;
+  background: url("../korytarz-podpowiedź.png") center/cover no-repeat fixed;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  color: #fefefe;
+}
+
+.hint-overlay {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 6vw, 48px);
+  padding: clamp(24px, 6vw, 48px);
+  background: linear-gradient(180deg, rgba(5, 7, 18, 0.6), rgba(5, 7, 18, 0.2));
+}
+
+.hint-popup {
+  max-width: min(360px, 80vw);
+  height: auto;
+  background: rgba(12, 18, 42, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 24px;
+  padding: clamp(16px, 4vw, 24px);
+  box-shadow: 0 28px 54px rgba(0, 0, 0, 0.45);
+  overflow: auto;
+  display: grid;
+  gap: 12px;
+}
+
+.hint-popup h1 {
+  margin: 0 0 14px;
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hint-popup p {
+  margin: 0 0 12px;
+  line-height: 1.8;
+  color: rgba(226, 232, 240, 0.95);
+}
+
+.hint-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.hint-table table {
+  border-collapse: collapse;
+  width: 100%;
+  background: rgba(15, 20, 46, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.hint-table th,
+.hint-table td {
+  padding: 12px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  text-align: center;
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.hint-table th {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.hint-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.hint-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(68px, 10vw, 110px);
+  height: clamp(68px, 10vw, 110px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 180, 72, 0.65);
+  background: rgba(255, 159, 28, 0.2);
+  color: #ffdd9a;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  backdrop-filter: blur(6px);
+}
+
+.hint-arrow span {
+  display: block;
+}
+
+.hint-arrow:hover,
+.hint-arrow:focus-visible {
+  box-shadow: 0 22px 48px rgba(255, 159, 28, 0.35);
+  background: rgba(255, 159, 28, 0.35);
+}
+
+.hint-arrow--back:hover,
+.hint-arrow--back:focus-visible {
+  transform: translateX(-6px);
+}
+
+.hint-arrow--forward:hover,
+.hint-arrow--forward:focus-visible {
+  transform: translateX(6px);
+}
+
+@media (max-width: 720px) {
+  .hint-overlay {
+    gap: 24px;
+  }
+
+  .hint-arrows {
+    justify-content: space-around;
+  }
+}

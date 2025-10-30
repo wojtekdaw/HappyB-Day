@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+
+.spark-body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", system-ui, sans-serif;
+  background: url("../korytarz-iskry.png") center/cover no-repeat fixed;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  color: #fefefe;
+}
+
+.spark-overlay {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 6vw, 48px);
+  padding: clamp(24px, 6vw, 48px);
+  background: linear-gradient(180deg, rgba(9, 6, 20, 0.6), rgba(9, 6, 20, 0.2));
+}
+
+.spark-popup {
+  max-width: min(360px, 80vw);
+  background: rgba(22, 16, 40, 0.78);
+  border: 1px solid rgba(255, 181, 98, 0.28);
+  border-radius: 24px;
+  padding: clamp(16px, 4vw, 24px);
+  box-shadow: 0 28px 54px rgba(0, 0, 0, 0.45);
+  display: grid;
+  gap: 12px;
+}
+
+.spark-popup h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.spark-popup p {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(252, 241, 224, 0.9);
+}
+
+.spark-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.spark-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(68px, 10vw, 110px);
+  height: clamp(68px, 10vw, 110px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 180, 72, 0.65);
+  background: rgba(255, 159, 28, 0.2);
+  color: #ffdd9a;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  backdrop-filter: blur(6px);
+}
+
+.spark-arrow span {
+  display: block;
+}
+
+.spark-arrow:hover,
+.spark-arrow:focus-visible {
+  box-shadow: 0 22px 48px rgba(255, 159, 28, 0.35);
+  background: rgba(255, 159, 28, 0.35);
+}
+
+.spark-arrow--back:hover,
+.spark-arrow--back:focus-visible {
+  transform: translateX(-6px);
+}
+
+.spark-arrow--forward:hover,
+.spark-arrow--forward:focus-visible {
+  transform: translateX(6px);
+}
+
+@media (max-width: 720px) {
+  .spark-overlay {
+    gap: 24px;
+  }
+
+  .spark-arrows {
+    justify-content: space-around;
+  }
+}

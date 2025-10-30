@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Różowe płomienie i susły</title>
+    <link rel="stylesheet" href="assets/flames.css" />
+  </head>
+  <body class="flame-landing">
+    <main class="flame-stage" id="start" aria-label="Animowana scena świstaków i płomieni">
+      <div class="flame-animation">
+        <img class="flame-animation__flames" src="flames.png" alt="" aria-hidden="true" />
+        <div class="marmot marmot--left">
+          <img src="sw2.png" alt="Świstak numer dwa wypatruje zza ognia" />
+        </div>
+        <div class="marmot marmot--center">
+          <img src="sw1.png" alt="Świstak numer jeden wychodzi z płomieni" />
+        </div>
+        <div class="marmot marmot--right">
+          <img src="sw3.png" alt="Świstak numer trzy zagląda z boku" />
+        </div>
+        <div class="marmot marmot--corner">
+          <img src="sw4.png" alt="Świstak numer cztery wychyla się z dołu" />
+        </div>
+      </div>
+      <header class="flame-nav">
+        <a class="flame-brand" href="index.html">Flamekeeper</a>
+        <nav class="flame-links" aria-label="Główna nawigacja">
+          <div class="flame-dropdown">
+            <button class="flame-dropdown__toggle" type="button" aria-haspopup="true" aria-expanded="false">Oferta</button>
+            <div class="flame-dropdown__menu">
+              <a href="taniec.html">Taniec</a>
+              <a href="lody.html">Lody</a>
+            </div>
+          </div>
+          <a href="date.html">Susły</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </header>
+
+      <section class="flame-hero" id="marmoty">
+        <div class="flame-hero__content">
+          <p class="flame-badge">Nowe doświadczenie</p>
+          <h1>Pozwól oddać się suślej przygodzie</h1>
+          <p class="flame-hero__text">
+            Przenieś się do ognistej kapsuły, gdzie pulsujące płomienie spotykają
+            rozpalone susły. Wystarczy chwila, aby zza żaru wyłonił się nowy
+            towarzysz zabawy. Jesteś gotów na ich sekretny taniec?
+          </p>
+          <div class="flame-hero__actions">
+            <a class="flame-primary" href="https://www.youtube.com/watch?v=8WddwFfcSIU">Zobacz spektakl</a>
+            <a class="flame-secondary" href="this_or_that.html">Zamów własny pokaz</a>
+          </div>
+          <dl class="flame-metrics">
+            <div>
+              <dt>Gorące sysły w Twojej okolicy</dt>
+              <dd>nie mogą się doczekać, aby sprawdzić jak smakują Twoje orzeszki.</dd>
+            </div>
+            <div>
+              <dt>Czas trwania</dt>
+              <dd>Nieustający, hipnotyzujący cykl</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="flame-device flame-device--compact">
+          <div class="flame-device__screen">
+            <span class="flame-device__logo">🔥</span>
+            <p>Temperatura</p>
+            <strong>888°C</strong>
+            <small>Osiągnij stan płomiennego uniesienia</small>
+            <div class="flame-device__meter">
+              <span style="width: 88%"></span>
+            </div>
+          </div>
+          <div class="flame-device__glow" aria-hidden="true"></div>
+        </div>
+      </section>
+    </main>
+
+    <section class="flame-contact" id="kontakt">
+      <div class="flame-card flame-card--cta">
+        <h2>Zamów prywatne ogniste show</h2>
+        <p>
+          Wypełnij wieczór płonącym performance susłów. Napisz do nas,
+          gwarantujemy niezapomniane doznania spersonalizowane dla Twoich preferencji.
+        </p>
+        <a class="flame-primary" href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="flame-card flame-card--glass">
+        <h3>Godziny działania</h3>
+        <ul>
+          <li>Poniedziałek–Piątek: 18:00 – 23:59</li>
+          <li>Sobota: 16:00 – 02:00</li>
+          <li>Niedziela: spektakl specjalny na żądanie</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="flame-footer">
+      <span>© Flamekeeper Collective — różowe płomienie nigdy nie gasną.</span>
+    </footer>
+  </body>
+</html>

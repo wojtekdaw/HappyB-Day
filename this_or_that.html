@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>This or That — Marmot Edition</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/this_or_that.css" />
+  </head>
+  <body class="tot-app">
+    <main class="tot-shell">
+      <header class="tot-header">
+        <h1>This or That?</h1>
+        <p>
+          W trosce o komfort naszych usług i zadowolenie klientów zapraszamy na szybką
+          zabawę z serii <strong>this or that?</strong> No dalej 😉 Poznajmy się!
+        </p>
+      </header>
+
+      <form class="tot-deck" id="tot-form">
+        <article class="tot-card">
+          <fieldset>
+            <legend>Kolacja na start</legend>
+            <div class="tot-options">
+              <label class="tot-option">
+                <input type="radio" name="dinner" value="pizza" required />
+                <span class="tot-image">
+                  <img src="this_or_that/pizza.png" alt="Pizza z serem" />
+                </span>
+              </label>
+              <label class="tot-option">
+                <input type="radio" name="dinner" value="kebab" />
+                <span class="tot-image">
+                  <img src="this_or_that/kebab.png" alt="Kebab w bułce" />
+                </span>
+              </label>
+            </div>
+          </fieldset>
+        </article>
+
+        <article class="tot-card">
+          <fieldset>
+            <legend>Napój ratunkowy</legend>
+            <div class="tot-options">
+              <label class="tot-option">
+                <input type="radio" name="drink" value="cola" required />
+                <span class="tot-image">
+                  <img src="this_or_that/cola.png" alt="Butelka coli" />
+                </span>
+              </label>
+              <label class="tot-option">
+                <input type="radio" name="drink" value="dzik" />
+                <span class="tot-image">
+                  <img src="this_or_that/dzik.png" alt="Napój Dzik" />
+                </span>
+              </label>
+            </div>
+          </fieldset>
+        </article>
+
+        <article class="tot-card">
+          <fieldset>
+            <legend>Słodycze — runda pierwsza</legend>
+            <div class="tot-options">
+              <label class="tot-option">
+                <input type="radio" name="gummies" value="zelki1" required />
+                <span class="tot-image">
+                  <img src="this_or_that/zelki1.png" alt="Pierwszy zestaw żelków" />
+                </span>
+              </label>
+              <label class="tot-option">
+                <input type="radio" name="gummies" value="zelki2" />
+                <span class="tot-image">
+                  <img src="this_or_that/zelki2.png" alt="Drugi zestaw żelków" />
+                </span>
+              </label>
+            </div>
+          </fieldset>
+        </article>
+
+        <article class="tot-card">
+          <fieldset>
+            <legend>Co na chrupanie?</legend>
+            <div class="tot-options">
+              <label class="tot-option">
+                <input type="radio" name="chips" value="lays" required />
+                <span class="tot-image">
+                  <img src="this_or_that/lays.png" alt="Chipsy Lays" />
+                </span>
+              </label>
+              <label class="tot-option">
+                <input type="radio" name="chips" value="star" />
+                <span class="tot-image">
+                  <img src="this_or_that/star.png" alt="Chipsy Star" />
+                </span>
+              </label>
+            </div>
+          </fieldset>
+        </article>
+
+        <article class="tot-card">
+          <fieldset>
+            <legend>Czekoladowy deser</legend>
+            <div class="tot-options">
+              <label class="tot-option">
+                <input type="radio" name="choco" value="czekolada" required />
+                <span class="tot-image">
+                  <img src="this_or_that/czekolada.png" alt="Tabliczka czekolady" />
+                </span>
+              </label>
+              <label class="tot-option">
+                <input type="radio" name="choco" value="duplo" />
+                <span class="tot-image">
+                  <img src="this_or_that/duplo.png" alt="Baton Duplo" />
+                </span>
+              </label>
+            </div>
+          </fieldset>
+        </article>
+
+        <article class="tot-card">
+          <fieldset>
+            <legend>Wieczorny chill</legend>
+            <div class="tot-options">
+              <label class="tot-option">
+                <input type="radio" name="evening" value="yt" required />
+                <span class="tot-image">
+                  <img src="this_or_that/yt.png" alt="Logo YouTube" />
+                </span>
+              </label>
+              <label class="tot-option">
+                <input type="radio" name="evening" value="netflix" />
+                <span class="tot-image">
+                  <img src="this_or_that/netflix.png" alt="Logo Netflix" />
+                </span>
+              </label>
+            </div>
+          </fieldset>
+        </article>
+
+        <footer class="tot-footer">
+          <button class="tot-button" type="submit">Zapisz wybory</button>
+        </footer>
+      </form>
+
+      <section class="tot-thanks" id="tot-thanks" hidden>
+        <h2>Dziękujemy za wskazówki!</h2>
+        <p>
+          Wszystko w trosce o najwyższą jakość naszych suślich usług. Twój wieczór będzie
+          dokładnie taki, jak lubisz.
+        </p>
+        <div class="tot-summary" id="tot-summary" aria-live="polite"></div>
+        <a class="tot-link" href="morse-korytarz-echo.html">Rozwiąż kolejną zagadkę</a>
+      </section>
+    </main>
+    <script src="assets/this_or_that.js" defer></script>
+  </body>
+</html>

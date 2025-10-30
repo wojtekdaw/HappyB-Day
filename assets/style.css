@@ -356,6 +356,54 @@ figure figcaption {
   letter-spacing: 0.12em;
 }
 
+.final-reveal__download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 79, 172, 0.12);
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255, 79, 172, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.final-reveal__download:hover,
+.final-reveal__download:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(255, 79, 172, 0.2);
+  box-shadow: 0 12px 28px rgba(255, 79, 172, 0.25);
+}
+
+.final-error {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 79, 172, 0.35);
+  background: rgba(255, 79, 172, 0.18);
+  display: grid;
+  gap: 8px;
+  color: #ffe6f4;
+  text-align: center;
+}
+
+.final-error strong {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.final-error p {
+  margin: 0;
+  color: #ffd0e8;
+  letter-spacing: 0.06em;
+}
+
 footer {
   margin-top: auto;
   padding: 24px clamp(16px, 4vw, 48px) 32px;

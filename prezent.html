@@ -31,14 +31,25 @@
             <p>
               Mam nadzieję, że znalazłeś wszystkie niespodzianki na stronie i się podobało.
               W prezencie mam dla Ciebie bilet na koncert!
-             <div class="gallery-grid gallery-grid--poster">
+              <a class="final-reveal__download" href="#" id="ticket-download">Kliknij, aby pobrać bilet</a>
+            </p>
+            <div class="final-error" id="ticket-error" hidden>
+              <div>
+                <strong>Błąd! Przepraszamy za niedogodności.</strong>
+                <p>
+                  Zrobiło się za gorąco. Odświeżenie strony za:
+                  <span id="ticket-countdown" aria-live="polite">5</span>s
+                </p>
+              </div>
+            </div>
+            <div class="gallery-grid gallery-grid--poster">
             <figure>
-              <img src="IMG_0602.png" alt="Wieczorny spacer po mieście" />
+              <img src="IMG_0602.png" alt="poczekaj a się załaduje" />
             </figure>
           </div>
-            </p>
           </div>
         </section>
     <script src="assets/script.js" defer></script>
+    <script src="assets/ticket.js" defer></script>
   </body>
 </html>

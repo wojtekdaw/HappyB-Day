@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marmot Match</title>
+    <link rel="stylesheet" href="assets/date.css" />
+  </head>
+  <body class="date-app">
+    <div class="date-shell">
+      <div class="date-status">
+        <span><strong>Marmot Match</strong></span>
+      </div>
+      <main class="date-card" aria-live="polite">
+        <figure class="date-figure">
+          <img id="profile-image" src="sw1.png" alt="Profil świstaka" />
+          <div class="date-figure__overlay" aria-hidden="true"></div>
+          <span class="date-figure__badge" id="profile-badge">Top pick</span>
+        </figure>
+        <article class="date-summary">
+          <header>
+            <h1 id="profile-name">
+              Sylwia z Doliny <span id="profile-age">24 lata</span>
+            </h1>
+            <div class="date-summary__meta">
+              <span id="profile-distance">2 km od Ciebie</span>
+              <span id="profile-status">W nastroju na wspólne chrupanie orzeszków</span>
+            </div>
+          </header>
+          <p class="date-summary__bio" id="profile-bio">
+            Znam wszystkie wyjścia z płonącej nory. Szukam kogoś, kto nie przestraszy się
+            iskier ani moich nocnych koncertów na patyku.
+          </p>
+          <section class="date-section">
+            <h2>Zainteresowania</h2>
+            <ul class="pill-list" id="profile-interests">
+              <li>Turlanie się w popiele</li>
+              <li>Plotki znad strumienia</li>
+              <li>Zbieranie malin</li>
+            </ul>
+          </section>
+          <section class="date-section">
+            <h2>Preferencje</h2>
+            <ul class="pill-list" id="profile-preferences">
+              <li>Poranki przy ognisku</li>
+              <li>Wyścigi po kłodach</li>
+              <li>Playlisty z gitarą</li>
+            </ul>
+          </section>
+        </article>
+      </main>
+      <div class="date-actions">
+        <button type="button" class="button-pass" id="button-pass" aria-label="Odrzuć profil">
+          ❌
+        </button>
+        <button type="button" class="button-like" id="button-like" aria-label="Polub profil">
+          ❤️
+        </button>
+      </div>
+    </div>
+    <script src="assets/date.js" defer></script>
+  </body>
+</html>

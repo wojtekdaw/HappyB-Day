@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap");
+
+.morse-body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 79, 172, 0.2), transparent 45%),
+    radial-gradient(circle at 80% 18%, rgba(56, 189, 248, 0.22), transparent 48%),
+    #05060f;
+  color: #f8f9ff;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 5vw, 48px);
+}
+
+.morse-shell {
+  width: min(100%, 1024px);
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 48px);
+  display: grid;
+  gap: clamp(24px, 5vw, 40px);
+}
+
+.morse-card {
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: 26px;
+  background: rgba(10, 14, 32, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 26px 52px rgba(0, 0, 0, 0.45);
+  display: grid;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.morse-phrase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(18px, 4vw, 28px);
+  justify-content: center;
+}
+
+.morse-word {
+  display: flex;
+  gap: 10px;
+  padding: 12px 14px 24px;
+  background: rgba(20, 26, 52, 0.65);
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  position: relative;
+}
+
+.morse-word::after {
+  content: attr(data-length) " lit.";
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 184, 0.72);
+}
+
+.morse-letter {
+  width: clamp(2.4rem, 6vw, 3rem);
+  height: clamp(2.4rem, 6vw, 3rem);
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(15, 23, 42, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  letter-spacing: 0.08em;
+}
+
+.morse-letter--revealed {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.morse-keyboard {
+  display: inline-flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.morse-keyboard button {
+  width: clamp(64px, 12vw, 96px);
+  height: clamp(64px, 12vw, 96px);
+  border-radius: 50%;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(15, 23, 42, 0.8);
+  color: #f8fafc;
+  font-size: clamp(1.6rem, 6vw, 2.6rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.morse-keyboard button:hover,
+.morse-keyboard button:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 18px 32px rgba(56, 189, 248, 0.25);
+}
+
+.morse-sequence {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.morse-sequence span:last-child {
+  font-family: "Fira Code", "DM Mono", monospace;
+  font-size: 1.1rem;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.morse-heading {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.morse-passphrase {
+  font-family: "Fira Code", "DM Mono", "Courier New", monospace;
+  font-size: 1rem;
+  background: rgba(15, 18, 42, 0.86);
+  border-radius: 18px;
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  padding: 16px 20px;
+  line-height: 1.6;
+  color: #c7d2fe;
+  overflow-x: auto;
+}
+
+.morse-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.morse-links {
+  display: grid;
+  gap: 12px;
+}
+
+.morse-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(24, 30, 58, 0.8);
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.morse-links a::after {
+  content: "→";
+  font-size: 1.1rem;
+}
+
+.morse-links a:hover,
+.morse-links a:focus-visible {
+  transform: translateX(4px);
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 18px 36px rgba(99, 102, 241, 0.25);
+}
+
+.morse-form {
+  display: grid;
+  gap: 14px;
+}
+
+.morse-form label {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(224, 231, 255, 0.78);
+}
+
+.morse-form textarea,
+.morse-form input[type="text"] {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  background: rgba(10, 14, 36, 0.82);
+  color: #e0e7ff;
+  font-family: "Fira Code", "DM Mono", monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.morse-form textarea {
+  min-height: 120px;
+}
+
+.morse-form input[type="text"] {
+  height: 52px;
+  line-height: 1.2;
+  resize: none;
+}
+
+.morse-form textarea:focus-visible,
+.morse-form input[type="text"]:focus-visible {
+  outline: none;
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+.morse-form button {
+  justify-self: start;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, rgba(255, 79, 172, 0.85), rgba(56, 189, 248, 0.85));
+  color: #05060f;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.morse-form button:hover,
+.morse-form button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(56, 189, 248, 0.35);
+}
+
+.morse-feedback {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(244, 114, 182, 0.85);
+}
+
+.morse-feedback--success {
+  color: rgba(34, 197, 94, 0.82);
+}
+
+.morse-location {
+  padding: 18px 22px;
+  border-radius: 20px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: #bbf7d0;
+}
+
+.morse-footer {
+  text-align: center;
+  margin: 0;
+  padding: 24px clamp(20px, 4vw, 40px) 48px;
+  color: rgba(148, 163, 184, 0.6);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.morse-hint-image {
+  width: min(100%, 640px);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.45);
+}
+
+.morse-hint-table {
+  border-collapse: collapse;
+  width: min(100%, 720px);
+  background: rgba(15, 18, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.morse-hint-table th,
+.morse-hint-table td {
+  padding: 10px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.morse-hint-table th {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.maze-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.maze-nav a {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  text-decoration: none;
+  color: rgba(226, 232, 240, 0.86);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.maze-nav a:hover,
+.maze-nav a:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+@media (max-width: 720px) {
+  .morse-shell {
+    padding-inline: clamp(16px, 5vw, 24px);
+  }
+
+  .morse-links a {
+    font-size: 0.72rem;
+  }
+
+  .morse-form textarea {
+    min-height: 140px;
+  }
+}

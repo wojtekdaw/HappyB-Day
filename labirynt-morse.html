@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Labirynt sygnałów</title>
+    <link rel="stylesheet" href="assets/morse-main.css" />
+  </head>
+  <body class="main-body">
+    <div class="main-overlay">
+      <section class="main-section">
+        <h1 class="main-heading">Labirynt sygnałów</h1>
+        <p>
+          Hasło składa się z pięciu słów. Widzisz jedynie liczbę liter — odsłaniaj litery, nadając
+          poprawne sekwencje w kodzie Morse’a. Gdy odkryjesz całość, wpisz hasło poniżej.
+        </p>
+        <div class="main-phrase" id="main-phrase"></div>
+        <div class="main-controls">
+          <button type="button" data-signal=".">.</button>
+          <button type="button" data-signal="-">-</button>
+        </div>
+        <div class="main-sequence">
+          <span>Aktualny sygnał:</span>
+          <span id="sequence">⌀</span>
+        </div>
+        <p class="main-feedback" id="feedback"></p>
+      </section>
+
+      <section class="main-secret">
+        <h2 class="main-heading" style="font-size: clamp(1.2rem,3vw,1.6rem);">Odsłoń hasło</h2>
+        <label for="secret-input">Wpisz odkryte hasło</label>
+        <input id="secret-input" type="text" autocomplete="off" placeholder="..." required />
+        <button type="button" id="secret-submit">Potwierdź</button>
+        <p class="main-feedback" id="secret-feedback"></p>
+        <div class="main-location" id="location" hidden>
+          <strong>LOKALIZACJA:</strong> Kurier dostarczy przesyłkę najszybciej jak to tylko możliwe!
+          Wygodnie usiądź, przejdź przez wszystkie moduły strony i rozkoszuj się temperaturą 😊
+        </div>
+      </section>
+
+      <section class="main-labyrinth">
+        <h2 class="main-heading" style="font-size: clamp(1.2rem,3vw,1.6rem);">Labirynt wskazówek</h2>
+        <p>Wejdź w boczne korytarze, jeśli potrzebujesz dodatkowych tropów.</p>
+        <div class="main-links">
+          <a href="morse-korytarz-echo.html">Korytarz Echo</a>
+          <a href="morse-korytarz-iskry.html">Schron Iskier</a>
+          <a href="morse-korytarz-podpowiedz.html">Stacja Sygnałów</a>
+        </div>
+      </section>
+    </div>
+    <div class="main-modal" id="courier-modal" hidden>
+      <div class="main-modal__card">
+        <h2>Hej, mam przesyłkę!</h2>
+        <img src="listonosz.png" alt="Listonosz z przesyłką" />
+        <p>
+          Kurier dostarczy przesyłkę najszybciej jak to tylko możliwe! Wygodnie usiądź,
+          przejdź przez wszystkie moduły strony i rozkoszuj się temperaturą 😊
+        </p>
+        <button type="button" id="courier-close">Zagrzej się</button>
+      </div>
+    </div>
+    <script src="assets/morse-main.js" defer></script>
+  </body>
+</html>
